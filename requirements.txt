@@ -1,8 +1,7 @@
-# Python version constraint — faiss-cpu currently supports Python 3.8–3.12
-python_version >= "3.8" and python_version < "3.13"
+# RAG Doc QA — requirements
+# FAISS only installs on Python >=3.8,<3.13; others are unconstrained.
 
 streamlit>=1.35.0
-faiss-cpu>=1.7.4
 tiktoken>=0.7.0
 beautifulsoup4>=4.12.3
 langchain-core>=0.2.0
@@ -10,5 +9,8 @@ langchain-openai>=0.1.14
 openai>=1.30.0
 requests>=2.32.0
 
-# Optional: for local embeddings (set provider="local" in the app)
+# FAISS (gated by Python version)
+faiss-cpu>=1.7.4; python_version >= "3.8" and python_version < "3.13"
+
+# Optional: local embeddings (set provider="local" in the app)
 sentence-transformers>=2.6.0
