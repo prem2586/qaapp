@@ -1,0 +1,9 @@
+streamlit
+langchain-openai
+openai
+python-dotenv
+faits-cpu
+tiktoken
+beautifulsoup4
+langchain-core
+sentence-transformers
